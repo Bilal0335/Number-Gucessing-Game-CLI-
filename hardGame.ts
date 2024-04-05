@@ -1,11 +1,20 @@
 import inquirer from "inquirer";
+import chalkAnimation from "chalk-animation";
 const log = console.log;
 
 export async function playHardGame(): Promise<void> {
   let playingAgain;
   let randomNumber = Math.floor(Math.random() * 100 + 1);
   let chanceLeft = 50;
-  log("^^**You will have total 50 chance to guess the correct number**^^");
+  async function userHard() {
+    let chanceUser = chalkAnimation.rainbow(
+      `\n\t\t**You will have total ${chanceLeft.toString()} chance to guess the correct number**\n`
+    );
+    await new Promise((resolve) => {
+      setTimeout(resolve, 5000);
+    });
+  }
+  await userHard();
   do {
     for (let i = 0; i < 500; i++) {
       const answer = await inquirer.prompt([
