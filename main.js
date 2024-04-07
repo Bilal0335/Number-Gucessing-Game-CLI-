@@ -19,22 +19,14 @@ async function PlayGame() {
     });
     title.stop();
 }
-async function letStart() {
-    let title = chalkAnimation.rainbow("\n\tYou will have to gucess a number btween 1 to 100");
-    await new Promise((resolve) => {
-        setTimeout(resolve, 5000);
-    });
-    title.stop();
-}
 await Welcome();
 await PlayGame();
-await letStart();
 const answer = await inquirer.prompt([
     {
         message: "Enter Your Choice ",
         type: "list",
         name: "userChoice",
-        choices: ["Easy", "Medium", "Hard"],
+        choices: ["Easy", "Medium", "Hard", "Exit"],
     },
 ]);
 if (answer.userChoice === "Easy") {
