@@ -1,5 +1,6 @@
 import inquirer from "inquirer";
 import chalkAnimation from "chalk-animation";
+import chalk from "chalk";
 const log = console.log;
 
 async function letStart() {
@@ -17,7 +18,7 @@ export async function playMediumGame(): Promise<void> {
   let playingAgain;
   let randomNumber = Math.floor(Math.random() * 50 + 1);
   let chanceLeft = 20;
-  
+
   async function userMedium() {
     let chanceUser = chalkAnimation.pulse(
       `\n\t\t**You will have total ${chanceLeft.toString()} chance to guess the correct number**\n`
@@ -47,7 +48,7 @@ export async function playMediumGame(): Promise<void> {
         break;
       } else {
         if (userplay > randomNumber) {
-          llog(
+          log(
             chalk.bgYellow.black.bold("\nInsert a smaller number. Try again.\n")
           );
         } else {
