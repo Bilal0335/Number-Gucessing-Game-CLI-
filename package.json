@@ -1,6 +1,6 @@
 {
-  "name": "@bilaljutt123/gucessing-numbers",
-  "version": "1.0.1",
+  "name": "@bilaljutt123/gucessing_numbers",
+  "version": "2.0.1",
   "description": "Project Number Gucessing CLI",
   "main": "index.js",
   "type": "module",

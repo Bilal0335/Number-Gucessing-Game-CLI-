@@ -39,9 +39,39 @@ const answer = await inquirer.prompt([
 ]);
 
 if (answer.userChoice === "Easy") {
+  async function letStart() {
+    let title = chalkAnimation.rainbow(
+      "\n\tYou will have to gucess a number btween 1 to 10"
+    );
+    await new Promise((resolve) => {
+      setTimeout(resolve, 5000);
+    });
+    title.stop();
+  }
+  await letStart();
   playEasyGame();
 } else if (answer.userChoice === "Medium") {
+  async function letStart() {
+    let title = chalkAnimation.rainbow(
+      "\n\tYou will have to gucess a number btween 1 to 50"
+    );
+    await new Promise((resolve) => {
+      setTimeout(resolve, 5000);
+    });
+    title.stop();
+  }
+  await letStart();
   playMediumGame();
 } else if (answer.userChoice === "Hard") {
+  async function letStart() {
+    let title = chalkAnimation.rainbow(
+      "\n\tYou will have to gucess a number btween 1 to 100"
+    );
+    await new Promise((resolve) => {
+      setTimeout(resolve, 5000);
+    });
+    title.stop();
+  }
+  await letStart();
   playHardGame();
 }

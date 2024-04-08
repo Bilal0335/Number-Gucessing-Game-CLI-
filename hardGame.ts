@@ -3,17 +3,6 @@ import chalkAnimation from "chalk-animation";
 import chalk from "chalk";
 const log = console.log;
 
-async function letStart() {
-  let title = chalkAnimation.rainbow(
-    "\n\tYou will have to gucess a number btween 1 to 100"
-  );
-  await new Promise((resolve) => {
-    setTimeout(resolve, 5000);
-  });
-  title.stop();
-}
-await letStart();
-
 export async function playHardGame(): Promise<void> {
   let playingAgain;
   let randomNumber = Math.floor(Math.random() * 100 + 1);
