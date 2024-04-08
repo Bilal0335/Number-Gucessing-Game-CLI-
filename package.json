@@ -1,7 +1,7 @@
 {
-  "name": "@bilaljutt123/gucessing-number",
+  "name": "@bilaljutt123/gucessing-numbers",
   "version": "1.0.1",
-  "description": "My Name is M.Bilal Hussain. Project Number Gucessing CLI",
+  "description": "Project Number Gucessing CLI",
   "main": "index.js",
   "type": "module",
   "publishConfig": {
@@ -11,7 +11,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Muhammad Bilal Hussain (Roll:00103106)",
   "license": "ISC",
   "dependencies": {
     "@bilaljutt123/gucessing-number": "^1.0.1",

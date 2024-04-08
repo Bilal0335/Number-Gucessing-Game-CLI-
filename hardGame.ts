@@ -1,5 +1,6 @@
 import inquirer from "inquirer";
 import chalkAnimation from "chalk-animation";
+import chalk from "chalk";
 const log = console.log;
 
 

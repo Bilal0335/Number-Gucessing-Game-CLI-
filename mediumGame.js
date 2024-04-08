@@ -31,16 +31,16 @@ export async function playMediumGame() {
             ]);
             let userplay = answer.userInput;
             if (userplay === randomNumber) {
-                log("\nCongratulations! You have successfully guessed the right number.\n");
-                log("\nThanks for playing. Have a nice day!\n");
+                log(chalk.bgGreen.italic(`\nCongratulations! You have successfully guessed the right number.\n`));
+                log(chalk.green("\nThanks for playing. Have a nice day!\n"));
                 break;
             }
             else {
                 if (userplay > randomNumber) {
-                    log("\nInsert a smaller number. Try again.\n");
+                    llog(chalk.bgYellow.black.bold("\nInsert a smaller number. Try again.\n"));
                 }
                 else {
-                    log("\nInsert a larger number. Try again.\n");
+                    log(chalk.bgYellow.black.bold("\nInsert a larger number. Try again.\n"));
                 }
             }
             chanceLeft--;
