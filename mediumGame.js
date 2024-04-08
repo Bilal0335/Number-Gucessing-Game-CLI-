@@ -1,5 +1,6 @@
 import inquirer from "inquirer";
 import chalkAnimation from "chalk-animation";
+import chalk from "chalk";
 const log = console.log;
 async function letStart() {
     let title = chalkAnimation.rainbow("\n\tYou will have to gucess a number btween 1 to 50");
@@ -37,7 +38,7 @@ export async function playMediumGame() {
             }
             else {
                 if (userplay > randomNumber) {
-                    llog(chalk.bgYellow.black.bold("\nInsert a smaller number. Try again.\n"));
+                    log(chalk.bgYellow.black.bold("\nInsert a smaller number. Try again.\n"));
                 }
                 else {
                     log(chalk.bgYellow.black.bold("\nInsert a larger number. Try again.\n"));

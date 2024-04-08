@@ -1,5 +1,6 @@
 import inquirer from "inquirer";
 import chalkAnimation from "chalk-animation";
+import chalk from "chalk";
 const log = console.log;
 async function letStart() {
     let title = chalkAnimation.rainbow("\n\tYou will have to gucess a number btween 1 to 100");
