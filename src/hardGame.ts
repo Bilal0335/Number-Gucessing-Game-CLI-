@@ -21,8 +21,15 @@ export async function playHardGame(): Promise<void> {
       const answer = await inquirer.prompt([
         {
           message: "Enter The Guessed Number",
-          type: "number",
+          type: "input",
           name: "userInput",
+          validate: (userInput) => {
+            if (isNaN(userInput)) {
+              return chalk.red.bold("Please enter valild number");
+            } else {
+              return true;
+            }
+          },
         },
       ]);
       let userplay = answer.userInput;
@@ -49,7 +56,9 @@ export async function playHardGame(): Promise<void> {
       log("Chances left to guess the random number:", chanceLeft, "\n");
       if (chanceLeft === 0) {
         log(
-          "Sorry, your chances have been exhausted to guess the random number.\n"
+          chalk.red.bold(
+            "Sorry, your chances have been exhausted to guess the random number.\n"
+          )
         );
         log("The random number was:", randomNumber);
         log("Thanks for playing. Have a nice day!");

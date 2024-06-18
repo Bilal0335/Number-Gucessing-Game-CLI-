@@ -31,7 +31,7 @@ await PlayGame();
 
 const answer = await inquirer.prompt([
   {
-    message: "Enter Your Choice ",
+    message: chalk.bold.yellow("Enter Your Choice "),
     type: "list",
     name: "userChoice",
     choices: ["Easy", "Medium", "Hard", "Exit"],

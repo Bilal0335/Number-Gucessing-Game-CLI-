@@ -18,8 +18,16 @@ export async function playEasyGame() {
             const answer = await inquirer.prompt([
                 {
                     message: "Enter The Guessed Number",
-                    type: "number",
+                    type: "input",
                     name: "userInput",
+                    validate: (userInput) => {
+                        if (isNaN(userInput)) {
+                            return chalk.red.bold("Please enter valild number");
+                        }
+                        else {
+                            return true;
+                        }
+                    },
                 },
             ]);
             let userplay = answer.userInput;
